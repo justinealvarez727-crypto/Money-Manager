@@ -27,6 +27,32 @@ input,select{width:100%;padding:11px;border:1px solid var(--l);border-radius:10p
 .seg{display:flex;border:1px solid var(--l);border-radius:20px;overflow:hidden;margin:8px 0}.seg b{flex:1;text-align:center;padding:8px 2px;font-weight:400;font-size:13px}.seg b.on{background:#2db84c33}
 .kp{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-top:8px}.kp b{background:var(--bg);border-radius:12px;padding:13px 0;text-align:center;font-size:20px;font-weight:400}
 .amt{font-size:34px;color:var(--g);border-bottom:2px solid var(--g);padding:4px 0}
+
+:root{--bg:#f5f6f8;--l:#eceef1}
+body{font:15px/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+button,input,select{font-family:inherit}
+#v{padding:16px 16px 130px}
+h2{font-size:22px;font-weight:700;margin:4px 0}
+a{font-weight:500;text-decoration:none}
+small{font-size:12.5px}
+.card{border-radius:18px;padding:16px;margin:12px 0;box-shadow:0 1px 3px rgba(20,30,50,.06)}
+.li{padding:10px 0;gap:14px}.li+.li{border-top:1px solid var(--l)}
+.big{font-weight:700;letter-spacing:-.5px}
+.btn{border-radius:14px;padding:14px;font-weight:600}
+input,select{border:1px solid transparent;border-radius:12px;padding:13px;margin:6px 0}
+input:focus,select:focus{outline:2px solid var(--g);background:var(--c)}
+.seg{border:0;background:var(--l);border-radius:14px;padding:3px}
+.seg b{border-radius:11px;padding:8px 2px;font-weight:500}
+.seg b.on{background:var(--c);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.bar{height:8px}
+.kp b{border-radius:14px;padding:14px 0}
+nav{border-top:0;box-shadow:0 -2px 14px rgba(20,30,50,.07);padding-top:8px}
+nav a{padding:2px 0}nav a.on{color:var(--g)}
+nav a span{font-size:22px;opacity:.5;filter:grayscale(1)}nav a.on span{opacity:1;filter:none}
+#sh{background:rgba(0,0,0,.4)}
+#sh>div{border-radius:24px 24px 0 0;padding:20px 16px 28px}
+#sh>div::before{content:"";display:block;width:40px;height:4px;border-radius:2px;background:var(--l);margin:-8px auto 14px}
+@media(prefers-color-scheme:dark){.card{box-shadow:none}}
 </style></head><body>
 <div id=v></div><div id=sh onclick="if(event.target==this)cl()"></div>
 <nav><a class=on data-t=h onclick="T='h';render()"><span>🏠</span>Home</a><a data-t=t onclick="T='t';render()"><span>👛</span>Transactions</a><a data-t=b onclick="T='b';render()"><span>🗂️</span>Budgets</a><a data-t=s onclick="T='s';render()"><span>🐷</span>Savings</a><a data-t=d onclick="T='d';render()"><span>🤝</span>Debts</a><a data-t=a onclick="T='a';render()"><span>👤</span>Account</a><button class=fab onclick=add()>+</button></nav>
